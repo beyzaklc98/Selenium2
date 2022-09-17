@@ -23,10 +23,10 @@ public class Homework1 {
     7. “Purchase Foreign Currency” tusuna basin
     8. “Currency” drop down menusunden Eurozone’u secin
     9. “amount” kutusuna bir sayi girin
-   10. “US Dollars” in secilmedigini test edin
-   11. “Selected currency” butonunu secin
-   12. “Calculate Costs” butonuna basin sonra “purchase” butonuna basin
-   13. “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
+    10. “US Dollars” in secilmedigini test edin
+    11. “Selected currency” butonunu secin
+    12. “Calculate Costs” butonuna basin sonra “purchase” butonuna basin
+    13. “Foreign currency cash was successfully purchased.” yazisinin ciktigini kontrol edin.
      */
     WebDriver driver;
     Select select;
@@ -39,7 +39,7 @@ public class Homework1 {
     }
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
     @Test
     public void test() {
