@@ -56,17 +56,19 @@ public class C03_DropDown {
         System.out.println(select.getFirstSelectedOption().getText());
 
         //Tüm dropdown değerleri(value) yazdırın
-        List<WebElement> liste=select.getOptions();
-        for (WebElement each:liste){
-            System.out.println(each.getText());
-        }
-        //Dropdown'un boyutunu bulun, Dropdown'da 4 öğe varsa konsolda True , degilse
-        //False yazdırın.
-        int actualOptionsNumbers=select.getOptions().size();
-        int expectedOptionsNumbers=4;
+        List<WebElement> butunDdm = driver.findElements(By.xpath("//option"));
+        butunDdm.forEach(t-> System.out.println(t.getText()));
+        System.out.println("=========================================");
+        //List <WebElement> tumDdm = select.getOptions();
+        //tumDdm.forEach(t-> System.out.println(t.getText()));
+        //for (WebElement w:tumDdm) {
+        //    System.out.println(w.getText());
 
-        if(actualOptionsNumbers==expectedOptionsNumbers){
+        //Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın.
+        System.out.println("DropDown Boyutu = "+butunDdm.size());
+        if (butunDdm.size()==4){
             System.out.println("True");
-        } else System.out.println("False");
+        }else System.out.println("False");
+        Assert.assertNotEquals(butunDdm.size(),4);
     }
 }
