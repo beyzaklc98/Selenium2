@@ -55,15 +55,31 @@ public class TestCase2 {
         Assert.assertTrue(loginToYourAccount.isDisplayed());
     }
     @Test
-    public void test4(){
-        // 6. Enter correct email address and password
-        driver.findElement(By.xpath("(//*[@name='email'])[1]")).sendKeys("beyzaklc@gmail.com");
-        driver.findElement(By.xpath("//*[@type='password']")).sendKeys("beyza");
+    public void test4() throws InterruptedException {
+        //6. Doğru e-posta adresini ve şifreyi girin
+        driver.findElement(By.xpath("//*[@name='email'][1]")).sendKeys("zzz@gmail.com");
+        driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("123456789");
+        Thread.sleep(1000);
+
     }
     @Test
     public void test5(){
-        // 7. Click 'login' button
+        // 7. 'Giriş' düğmesini tıklayın
         driver.findElement(By.xpath("//*[text()='Login']")).click();
-
+    }
+    @Test
+    public void test6(){
+        // 8. Verify that 'Logged in as username' is visible
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@class='fa fa-user']")).isDisplayed());
+    }
+    @Test
+    public void test7(){
+        // 9. Click 'Delete Account' button
+        driver.findElement(By.xpath("(//*[@style='color:brown;'])[2]")).click();
+    }
+    @Test
+    public void test8(){
+        // 10. Verify that 'ACCOUNT DELETED!' is visible
+        Assert.assertTrue(driver.findElement(By.xpath("(//*[text()='Delete Account'])[1]")).isDisplayed());
     }
 }

@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -35,24 +36,40 @@ public class TestCase3 {
     }
     @AfterClass
     public static void tearDown(){
-        //driver.close();
+        driver.close();
     }
     @Test
     public void test1(){
-        // Verify that home page is visible successfully
+        // 3. Verify that home page is visible successfully
         Assert.assertTrue(driver.findElement(By.xpath("//*[@style='color: orange;']")).isDisplayed());
 
     }
     @Test
     public void test2(){
-        // Click on 'Signup / Login' button
+        // 4. Click on 'Signup / Login' button
         driver.findElement(By.xpath("//*[text()=' Signup / Login']")).click();
     }
     @Test
     public void test3(){
-        // Verify 'Login to your account' is visible
-        //WebElement loginToYourAccount =driver.findElement(By.xpath("//*[text()='Login to your account']"));
-        //Assert.assertTrue(loginToYourAccount.isDisplayed());
+        // 5. Verify 'Login to your account' is visible
+        WebElement loginToYourAccount =driver.findElement(By.xpath("//*[text()='Login to your account']"));
+        Assert.assertTrue(loginToYourAccount.isDisplayed());
+    }
+    @Test
+    public void test4(){
+        // 6. Enter incorrect email address and password
+        driver.findElement(By.xpath("(//*[@name='email'])[1]")).sendKeys("z@gmail.com");
+        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123");
+    }
+    @Test
+    public void test5(){
+        // 7. Click 'login' button
+        driver.findElement(By.xpath("//*[text()='Login']")).click();
+    }
+    @Test
+    public void test6(){
+        // 8. Verify error 'Your email or password is incorrect!' is visible
+        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Your email or password is incorrect!']")).isDisplayed());
     }
 
 
