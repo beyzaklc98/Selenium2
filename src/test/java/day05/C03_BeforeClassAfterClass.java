@@ -46,6 +46,6 @@ public class C03_BeforeClassAfterClass {
         driver.get("https://hepsiburada.com");
     }
 }
-// BeforeClass-AfterClass ---> BeforeClass+Test+Test+Test+AfterClass çalışıyor sırayla (toplam 5 method çalışıyor)
+// BeforeClass-AfterClass ---> BeforeClass+Before+Test+Test+Test+After çalışıyor, 1 defa BeforeClass calısıyor
 // Tüm testleri aynı browser'da açtı, son testten sonra browser'ı kapattı
 // Before-After ---> Before+Test+After    Before+Test+After   Before+Test+After şeklinde (toplam 9 method çalışıyor)

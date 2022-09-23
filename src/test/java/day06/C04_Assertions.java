@@ -33,25 +33,25 @@ public class C04_Assertions {
     }
     @Test
     public void test1(){
-        //* titleTest => Sayfa başlığının “YouTube” oldugunu test edin
+        // titleTest => Sayfa başlığının “YouTube” oldugunu test edin
         String expectedTitle = "YouTube";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
     }
     @Test
     public void test2(){
-//* imageTest => YouTube resminin görüntülendiğini (isDisplayed()) test edin
+        // imageTest => YouTube resminin görüntülendiğini (isDisplayed()) test edin
         WebElement youtubeLogo = driver.findElement(By.xpath("(//*[@id='logo-icon'])[1]"));
         Assert.assertTrue(youtubeLogo.isDisplayed());
     }
     @Test
     public void test3(){
-//Search Box 'in erisilebilir oldugunu test edin (isEnabled())
+        // Search Box 'in erisilebilir oldugunu test edin (isEnabled())
         Assert.assertTrue(driver.findElement(By.xpath("(//*[@id='search'])[3]")).isEnabled());
     }
     @Test
     public void test4(){
-//* wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
+        // wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
         String actualTitle = driver.getTitle();
         String unExpectedTitle = "youtube";
         Assert.assertNotEquals(unExpectedTitle,actualTitle);

@@ -31,7 +31,7 @@ public class C01_MavenIlkTest {
         //3- “Samsung headphones” ile arama yapalim
         aramaKutusu.sendKeys("Samsung headphones", Keys.ENTER);
 
-        //4- Bulunan sonuc sayisini yazdiralim
+        //4- Bulunan sonuc sayisini yazdiralim *
         //WebElement sonucYazisi = driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
         //System.out.println(sonucYazisi.getText());
         String [] sonucYazisi = driver.findElement

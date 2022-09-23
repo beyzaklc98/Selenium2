@@ -59,8 +59,6 @@ public class C03_DropDown {
         List<WebElement> butunDdm = driver.findElements(By.xpath("//option"));
         butunDdm.forEach(t-> System.out.println(t.getText()));
         System.out.println("=========================================");
-        //List <WebElement> tumDdm = select.getOptions();
-        //tumDdm.forEach(t-> System.out.println(t.getText()));
         //for (WebElement w:tumDdm) {
         //    System.out.println(w.getText());
 

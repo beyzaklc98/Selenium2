@@ -8,9 +8,9 @@ public class C01_JUnit {
 
     // method olusturtuk, burada junit ile testlerimizi yapabilmek icin üzerine @ annotations dedigimiz @ isaretini
     // koyuyoruz ve test yazıyoruz
-    // run tusu main method yazarsak veya test notasyonunu yazarsak cıkar.
+    // run tusu, main method yazarsak veya test notasyonunu yazarsak cıkar.
     // JUnit ten run yaparsak buradaki bütün methodlar calisir yani aynı anda birden fazla yerin testini yapabiliriz.
-    // kod calıstıktan sonra asağıda kac saniyede calıstığı ve test passed seklinde cıkar.
+    // kod calıstıktan sonra asağıda kac saniyede calıstığı ve test passed veya failed seklinde cıkar.
 
     @Test
     public void method1() {

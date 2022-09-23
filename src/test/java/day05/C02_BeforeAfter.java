@@ -35,7 +35,7 @@ public class C02_BeforeAfter {
 
             // @Before kullaniyorsak method icin istedigimiz ismi kullanabiliriz ancak genel olarak kullanımı setUp seklindedir
             // @Before kullandığımızda testlerimizden önce yapmak zorunda oldugumuz
-            // driver objelerini yazmak yerine @Before ile bir kere yazarız
+            // driver objelerini yazmak yerine @Before ile bir kere yazarız, tekrardan kurtuluruz *
             // yani her testten önce burayı calıstır, sonra testlerimizi calıstır.
             // diğer testlerimizde rahat kullanabilmek icin bunu class seviyesinde tanımlamamız gerekir.
             // driver objesini direk kullanabilmek icin class seviyesine WebDriver driver yaz!!
