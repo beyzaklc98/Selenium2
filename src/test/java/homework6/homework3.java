@@ -1,5 +1,20 @@
 package homework6;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import java.awt.*;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
 public class homework3 {
 
     /*
@@ -26,6 +41,33 @@ public class homework3 {
     Test04
     1-sepetteki ürünlerle eklediğimiz ürünlerin aynı olduğunu isim ve fiyat olarak doğrulayın
      */
+    WebDriver driver;
+    @Before
+    public void setup(){
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+    }
+    @After
+    public void tearDown(){
+        //driver.close();
+    }
+    @Test
+    public void test1(){
+        // 1-amazon gidin
+        driver.get("https://amazon.com");
+        // 2-Arama kutusunun solundaki dropdown menuyu handle edip listesini ekrana yazdırın
+        WebElement searchBox=driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement dropDownMenu=driver.findElement(By.id("searchDropdownBox"));
+        Select select = new Select(dropDownMenu);
+        List<WebElement> dropList=select.getOptions();
+        for (WebElement each:dropList ) {
+            System.out.println(each.getText());
+        }
+        // 3-dropdown menude 40 eleman olduğunu doğrulayın
+    }
+
 
 
 }

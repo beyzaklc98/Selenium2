@@ -54,6 +54,6 @@ public class C03_SenkranizasyonWait extends TestBaseBeforeAfter {
     }
 }
 
-//implicitly wait testten once calsitirilir ve calistirilan testin tamamina etki eder
-//explicitly wait ise once obje olarak olusturulur sonra
-// sadece kullanildigi yerde ve belirlenen sarta gore calisir class yada test in tamamina uygulanmaz
+   // implicitly wait testten once calsitirilir ve calistirilan testin tamamina etki eder
+   // explicitly wait ise once obje olarak olusturulur sonra
+   // sadece kullanildigi yerde ve belirlenen sarta gore calisir class yada test in tamamina uygulanmaz
