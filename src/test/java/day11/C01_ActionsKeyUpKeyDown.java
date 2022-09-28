@@ -14,6 +14,7 @@ public class C01_ActionsKeyUpKeyDown extends TestBaseBeforeAfter {
         //Arama kutusuna actions method’larine kullanarak  samsung A71 yazdirin ve Enter’a basarak arama  yaptirin
         //Actions actions = new Actions(driver);
         WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
+        Actions actions = new Actions(driver);
         actions.click(aramaKutusu).
                 sendKeys("samsung").
                 sendKeys(" ").

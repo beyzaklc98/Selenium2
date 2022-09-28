@@ -18,6 +18,7 @@ public class C05_Actions extends TestBaseBeforeAfter {
         //Actions actions = new Actions(driver);
         //Extends yaptığımız TestBase Class'da Actions classını oluşturduğumuz için direk objeyi burda kullandık
         Thread.sleep(2000);
+        Actions actions = new Actions(driver);
         actions.dragAndDrop(dragMe,dropHere).perform();
         //“Drop here” yazisi yerine “Dropped!” oldugunu test edin
         Assert.assertEquals("Dropped!",driver.findElement(By.xpath("//*[text()='Dropped!']")).getText());

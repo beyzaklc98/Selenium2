@@ -11,7 +11,7 @@ public class C01_ReadExcel {
     public void readExcelTest1() throws IOException {
         //- Dosya yolunu bir String degiskene atayalim
         String dosyaYolu = "src/resources/ulkeler.xlsx";
-        //- FileInputStream objesi olusturup,parametre olarak dosya yolunu girelim
+        //- FileInputStream objesi olusturup,parametre olarak dosya yolunu girelim, akısa alıyoruz
         FileInputStream fis = new FileInputStream(dosyaYolu); //Olusturmuş olduğumuz dosyayı sistemde işleme alır
         //- Workbook objesi olusturalim,parameter olarak fileInputStream objesini girelim
         //- WorkbookFactory.create(fileInputStream)
@@ -21,7 +21,7 @@ public class C01_ReadExcel {
         //- Row objesi olusturun sheet.getRow(index)
         Row row = sheet.getRow(3); // Sayfa bir deki 3. satırı bu şekilde seçeriz
         //- Cell objesi olusturun row.getCell(index)
-        Cell cell = row.getCell(3); // Satır seçimi yapıldıktan sonra hücre seçimi bu şekilde yapılır
+        Cell cell = row.getCell(3); // Satır seçimi yapıldıktan sonra hücre seçimi bu şekilde yapılır, sütun
         System.out.println(cell);
         //- 3. index'deki satirin 3. index'indeki datanin Cezayir oldugunu test edin
         String expectedData = "Cezayir";

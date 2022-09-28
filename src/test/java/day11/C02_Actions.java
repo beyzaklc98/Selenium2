@@ -16,6 +16,7 @@ public class C02_Actions extends TestBaseBeforeAfter {
         //Actions actions = new Actions(driver);
         WebElement isim = driver.findElement(By.xpath("(//*[@class='inputtext _58mg _5dba _2ph-'])[1]"));
         isim.sendKeys("Erol");
+        Actions actions = new Actions(driver);
         actions.sendKeys(Keys.TAB).
                 sendKeys("Evren").
                 sendKeys(Keys.TAB).
